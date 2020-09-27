@@ -1,0 +1,133 @@
+.background{
+    background-color: #222222;
+}
+
+#menu_atas {
+    background-color : #375a7f;
+    position : fixed; 
+    top: 0;
+    width:100%;
+    z-index: 1;
+}
+.kiri img{
+    height: 36px;
+    width: 36px;
+    margin: 0px;
+    padding:0px;
+}
+.kiri{
+    float:left;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background: none;
+    margin : 5px 0px 5px 10px;
+}
+#padding_kiri{
+    margin-right : 5px;
+    float:left;
+}
+#padding_kiri:hover{
+    margin-right : 5px;
+}
+.kiri_title{
+    float:left;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background: none;
+    margin : 8.5px 0px 5px 5px;
+    color : black;
+}
+.kiri_title:hover{
+    color : black;
+}
+#padding_kanan{
+    float :left;
+    margin-left : 0px;
+}
+.kanan{
+    float: right;
+    position: center;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background: none;
+    margin : 5px 10px 5px 0px;
+}
+#input_search{
+    width:500px;
+}
+.button_link:hover{
+    color:black;
+}
+.search{
+    width: 1000px;
+}
+
+.inti{
+    margin-top:100px;
+}
+.kolom {
+    float: left;
+    padding: 0px 10px 10px 10px;
+  }
+.kolom a{
+    text-decoration-line: none;
+}
+.kolom.samping {
+    height: auto;
+    width: 12%;
+}
+.kolom.tengah {
+    width: 76%;
+}
+#kanan{
+    background-color: grey;
+    border-right: 10px solid #222222;
+}
+.baris:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media (max-width: 600px) {
+    .kolom.samping, .kolom.tengah {
+      width: 100%;
+    }
+}
+#table_ref{
+    width: 100%;
+    border: 3px solid #4285f4;
+    color: #e7e5df;
+}
+#table_ref td{
+    padding: 5px 5px 5px 5px;
+    min-width: inherit;
+    border: 3px solid #4285f4;
+}
+#table_ref-ukuran_cover{
+    height:360px;
+    width:220px;
+}
+#table_ref_judul_novel_table{
+    height: 10%;
+}
+#table_ref_last_chapter_table{
+    height: 10%;
+}
+#table_ref_genre_table{
+    height: 10%;
+}
+#table_ref_deskripsi_table{
+    height: 70%;
+}
+.link{
+    color:white;
+    padding:5px;
+    text-decoration-line: none;
+}
+.link:hover{
+    color:black;
+    text-decoration-line: none;
+}
