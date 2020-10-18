@@ -1,0 +1,63 @@
+#main_section{
+    background-color: #f2f2f2;
+    min-height: 900px;
+}
+.inti{
+    margin-top:60px;
+    height: max-content;
+}
+.kolom {
+    float: left;
+    padding: 0px 10px 10px 10px;
+  }
+.kolom a{
+    text-decoration-line: none;
+}
+.kolom.samping {
+    height: auto;
+    width: 12%;
+}
+.kolom.tengah {
+    width: 76%;
+    padding: 70px 100px;
+}
+/*
+#kanan{
+    background-color: grey;
+    border-right: 10px solid #222222;
+}*/
+.baris:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media (max-width: 600px) {
+    .kolom.samping, .kolom.tengah {
+      width: 100%;
+    }
+}
+#table_ref{
+    width: 100%;
+    border: 3px solid grey;
+    color: #e7e5df;
+}
+#table_ref td{
+    padding: 5px 5px 5px 5px;
+    min-width: 50%;
+    border: 3px solid grey;
+}
+#table_ref-ukuran_cover{
+    height:360px;
+    width:220px;
+}
+.link{
+    color:white;
+    padding:5px;
+    text-decoration-line: none;
+}
+.link:hover{
+    color:black;
+    text-decoration-line: none;
+}
+
+/*------------------------------------------------*/
