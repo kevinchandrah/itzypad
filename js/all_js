@@ -14,15 +14,15 @@ function first_run(){
         window.location.href = "home.html";
     }
     //load menu bagian kiri dan tengah
-    $('#menu_kiri').load("http://localhost/template_menu_kiri.html");
-    $('#menu_search').load("http://localhost/template_menu_search.html");
+    $('#menu_kiri').load("https://kevinchandrah.github.io/itzypad/template_menu_kiri.html");
+    $('#menu_search').load("https://kevinchandrah.github.io/itzypad/template_menu_search.html");
     feather.replace();
 
     //load menu bagian kanan
     if (sessionStorage.getItem('userLogin') == "true")  {
-        $('#menu_account').load("http://localhost/template_menu_user.html");
+        $('#menu_account').load("https://kevinchandrah.github.io/itzypad/template_menu_user.html");
     } else {
-        $('#menu_account').load("http://localhost/template_menu_login_register.html");
+        $('#menu_account').load("https://kevinchandrah.github.io/itzypad/template_menu_login_register.html");
     }
 
     //load buku
