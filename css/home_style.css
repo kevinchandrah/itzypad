@@ -1,0 +1,71 @@
+.inti{
+    margin-top:60px;
+    height: max-content;
+}
+.kolom {
+    float: left;
+    padding: 0px 10px 10px 10px;
+  }
+.kolom a{
+    text-decoration-line: none;
+}
+.kolom.samping {
+    height: auto;
+    width: 12%;
+}
+.kolom.tengah {
+    width: 76%;
+    padding: 70px 20px;
+}
+/*
+#kanan{
+    background-color: grey;
+    border-right: 10px solid #222222;
+}*/
+.baris:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media (max-width: 600px) {
+    .kolom.samping, .kolom.tengah {
+      width: 100%;
+    }
+}
+#table_ref{
+    width: 100%;
+    border: 3px solid grey;
+    color: #e7e5df;
+}
+#table_ref td{
+    padding: 5px 5px 5px 5px;
+    min-width: inherit;
+    border: 3px solid grey;
+}
+#table_ref-ukuran_cover{
+    height:360px;
+    width:220px;
+}
+#table_ref_judul_novel_table{
+    height: 10%;
+}
+#table_ref_last_chapter_table{
+    height: 10%;
+}
+#table_ref_genre_table{
+    height: 10%;
+}
+#table_ref_deskripsi_table{
+    height: 70%;
+}
+.link{
+    color:white;
+    padding:5px;
+    text-decoration-line: none;
+}
+.link:hover{
+    color:black;
+    text-decoration-line: none;
+}
+
+/*------------------------------------------------*/
