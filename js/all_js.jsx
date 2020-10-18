@@ -13,9 +13,6 @@ function first_run(){
     if( window.location.href.split(/(\\|\/)/g).pop() == "user_setting.html" && sessionStorage.getItem("userLogin") == "null"){
         window.location.href = "home.html";
     }
-    if( window.location.href.split(/(\\|\/)/g).pop() == "user_setting.html" && sessionStorage.getItem("userLogin") == "null"){
-        window.location.href = "home.html";
-    }
     //load menu bagian kiri dan tengah
     $('#menu_kiri').load("https://kevinchandrah.github.io/itzypad/template_menu_kiri.html");
     $('#menu_search').load("https://kevinchandrah.github.io/itzypad/template_menu_search.html");
