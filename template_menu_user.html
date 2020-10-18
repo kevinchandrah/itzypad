@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div id = "padding_kiri" class="dropdown">
+            <button id="account_button" onclick="user_button()" type="button" class="btn btn-outline-light">
+                <script>
+                    document.getElementById('account_button').innerHTML = sessionStorage.getItem("userNickname");
+                </script>
+            </button>
+            <div id="menu_user" class="dropdown-content">
+                <a class="a_button" onclick="setting_button()">Setting</a>
+                <form>
+                    <a class="a_button" onclick="log_out_button()">Log out</a>
+                </form>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </body>
+</html>
