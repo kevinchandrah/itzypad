@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div id="padding_kiri">
+            <button class="btn btn-outline-light" onclick="document.getElementById('pop1').style.display='block'" style="width:auto;">Login</button>
+            <div id="pop1" class="modal">
+                <form class="form_content animate table-dark" action="" method="post">
+                    <div class="pop_up">
+                        <label for="uname"><b>Username</b></label>
+                        <input id="login_username" class ="pop_input" type="text" placeholder="Enter Username" required>
+                        <label for="psw"><b>Password</b></label>
+                        <input  id="login_password" class ="pop_input" type="password" placeholder="Enter Password" required>                           
+                        <button id="login_enter" class="pop_button btn-outline-light" type="submit" onclick="login()">Login</button>
+                    </div>
+                    <div class="pop_up2">
+                        <button id="login_button" type="button" onclick="pop_up_back()"class="cancelbtn pop_button btn-outline-light">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <button id="padding_kanan" onclick="register_button()" type="submit" class="btn btn-outline-light">Register</button>
+    </body>
+</html>
