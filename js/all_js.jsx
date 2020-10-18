@@ -42,12 +42,13 @@ function login(){
         sessionStorage.setItem("loginNama",nama);
         sessionStorage.setItem("loginPassword",password);
     }
-    if ( sessionStorage.getItem("userName") == sessionStorage.getItem("loginNama") && sessionStorage.getItem("userPassword") == sessionStorage.getItem("loginPassword") &&
-         sessionStorage.getItem("userName") != "null" && sessionStorage.getItem("userPassword") != "null"){
-        alert('login success');
-        sessionStorage.setItem("userLogin","true");
-    } else {
-        alert('login fail');
+    if ( sessionStorage.getItem("userName") == sessionStorage.getItem("loginNama") && sessionStorage.getItem("userPassword") == sessionStorage.getItem("loginPassword") ){
+        if ( sessionStorage.getItem("userName") != "null" && sessionStorage.getItem("userPassword") != "null"){
+            alert('login success');
+            sessionStorage.setItem("userLogin","true");
+        } else {
+            alert('login fail');
+        }
     }
     window.location.href = "home.html";
 }
