@@ -43,13 +43,13 @@ function login(){
         sessionStorage.setItem("loginPassword",password);
     }
     if ( sessionStorage.getItem("userName") == sessionStorage.getItem("loginNama") && sessionStorage.getItem("userPassword") == sessionStorage.getItem("loginPassword") &&
-         sessionStorage.getItem("userName") != null && sessionStorage.getItem("userPassword") != null){
+         sessionStorage.getItem("userName") != "null" && sessionStorage.getItem("userPassword") != "null"){
         alert('login success');
         sessionStorage.setItem("userLogin","true");
     } else {
         alert('login fail');
     }
-    location.reload();
+    window.location.href = "home.html";
 }
 
 //========================================================================================
