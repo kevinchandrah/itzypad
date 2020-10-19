@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded',first_run);
 
 function login(){
     var nama = document.getElementById('login_username').value;
-    var password = document.getElementById('login_password').value;
+    
     
     window.location.href = "home.html";
 }
