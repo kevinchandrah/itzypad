@@ -35,7 +35,23 @@ document.addEventListener('DOMContentLoaded',first_run);
 
 
 function login(){
+    var nama = document.getElementById('login_username').value;
+    var password = document.getElementById('login_password').value;
+    if(sessionStorage.getItem("userName") != null && sessionStorage.getItem("userPassword") != null)
+    {
+        sessionStorage.setItem("loginNama",nama);
+        sessionStorage.setItem("loginPassword",password);
+    }
+    if ( sessionStorage.getItem("userName") == sessionStorage.getItem("loginNama") && sessionStorage.getItem("userPassword") == sessionStorage.getItem("loginPassword") ){
+        if ( sessionStorage.getItem("userName") != "null" && sessionStorage.getItem("userPassword") != "null"){
+            alert('login success');
+            sessionStorage.setItem("userLogin","true");
+        } else {
+            alert('login fail');
+        }
+    }
     
+    window.location.href = "home.html";
 }
 
 //========================================================================================
