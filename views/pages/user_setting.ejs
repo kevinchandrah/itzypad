@@ -1,0 +1,78 @@
+<% if (alert == "change_password_ide") { %>
+    <div id= "alert_Custom" class="alert alert-danger" role="alert">
+        your new password and new confirm password isn't identical.
+    </div>
+<% } else if (alert == "change_password_old") { %>
+    <div id= "alert_Custom" class="alert alert-danger" role="alert">
+        your old password incorrect.
+    </div>
+<% } else if (alert == "change_nickname") { %>
+    <div id= "alert_Custom" class="alert alert-success" role="alert">
+        your nickname has been changed.
+    </div>
+<% } else if (alert == "change_white_theme") { %>
+    <div id= "alert_Custom" class="alert alert-info" role="alert">
+        your theme is white now.
+    </div>
+    <% } else if (alert == "change_black_theme") { %>
+        <div id= "alert_Custom" class="alert alert-info" role="alert">
+            your theme is black now.
+        </div>
+<% } %>
+
+<form action="/change_password" method="post">
+    <table id="table_ref" class="table table-bordered table-dark" border="3">
+        <tr>
+            <td colspan="2" align="center"><label>Change Password</label></td>
+        </tr>
+        <tr>
+            <td><label>Old password </label></td>
+            <td><input type="password" name="old_password" required></td>
+        </tr>
+        <tr>
+            <td><label>New password </label></td>
+            <td><input type="password" name="new_password" required></td>
+        </tr>
+        <tr>
+            <td><label>New password Confirm</label></td>
+            <td><input type="password" name="new_password_confirm" required></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right"><button id="button_color" class="btn btn-outline-light tengah">change</button></td>
+        </tr>
+    </table>
+</form>
+
+<form action="/change_nickname" method="post">
+    <table id="table_ref" class="table table-bordered table-dark" >
+        <tr>
+            <td colspan="2" align="center"><label>Change Name</label></td>
+        </tr>
+        <tr>
+            <td><label>new name</label></td>
+            <td><input type="text" name="nickname" required></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right"><button id="button_color" onclick="change_nickname()" class="btn btn-outline-light tengah">change</button></td>
+        </tr>
+    </table>
+</form>
+    <table id="table_ref" class="table table-bordered table-dark" >
+        <tr>
+            <td colspan="2" align="center"><label>Change Theme</label></td>
+        </tr>
+        <tr>
+            <form action="/change_black_theme" method="post">
+                <td><label>black</label></td>
+
+                <td align ="center"><button id="button_color" class="btn btn-outline-light tengah">change</button></td>
+            </form>
+        </tr>
+        <tr>
+            <form action="/change_white_theme" method="post">
+                <td><label>white</label></td>
+                <td align ="center"><button id="button_color" class="btn btn-outline-light tengah">change</button></td>
+            </form>
+        </tr>
+    </table>
+</form>
