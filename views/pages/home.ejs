@@ -1,0 +1,47 @@
+<%# for error %>
+
+<% if (alert == "login_Success") { %>
+    <div id= "alert_Custom" class="alert alert-success" role="alert">
+        Login success
+    </div>
+<% } else if (alert == "register_Success") { %>
+    <div id= "alert_Custom" class="alert alert-success" role="alert">
+        Login success
+    </div>
+<% } else if (alert == "introduction_first") { %>
+    <div id= "alert_Custom" class="alert alert-success" role="alert">
+        Welcome, hover to title and click it to select to book.
+    </div>
+<% } %>
+
+<%# main section %>
+
+<% if(tasks){ %>
+<% tasks.forEach((task, index) => { %>
+    <% if(task.title.toLowerCase().includes(test.toLowerCase())){ %>
+        <table id="table_ref" class="table table-bordered table-dark">
+            <tr>
+                <td id="table_ref-ukuran_cover" rowspan="3" ><img id="table_ref-ukuran_cover" src="<%= task.cover %>"></td>
+                <td id="table_ref_title_book_table">
+                    <form action="/l_description_book" method="post">
+                        <input type="hidden" name ="name_book"value="<%= task.title %>">
+                        <button id ="button_ms"><%= task.title %></button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td id="table_ref_genre_table" colspan="2">genre : <%= task.genre %></td>
+            </tr>
+            <tr>
+                <td id="table_ref_description_table" colspan="2">Description<br><br><%= task.description %></td>
+            </tr>
+        </table>
+    <% } %>
+<% }) %>
+<% } else { %>
+    lol
+<% } %>
+
+
+
+
