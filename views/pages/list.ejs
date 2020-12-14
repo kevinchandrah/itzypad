@@ -1,0 +1,14 @@
+<h1 style="text-align: center;">
+    List Book
+</h1>
+<% tasks.forEach((task, index) => { %>
+            <div id="table_ref_title_book_table">
+                <form action="/l_description_book" method="post">
+                    <input type="hidden" name ="name_book"value="<%= task.title %>">
+                    <button id ="button_ms"><%= task.title %></button>
+                </form>
+            </div>
+<% }) %>
+
+
+
