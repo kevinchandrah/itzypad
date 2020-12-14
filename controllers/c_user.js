@@ -13,7 +13,8 @@ async function uCreate(username,password,email,nickname){
         username : username,
         password : password,
         email : email,
-        nickname : nickname
+        nickname : nickname,
+        theme : white
     })
     return await data_user.save()
 }
