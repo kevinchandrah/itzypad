@@ -1,0 +1,24 @@
+<% if (alert == "login_Failed") { %>
+    <div id= "alert_Custom" class="alert alert-danger" role="alert">
+        your username or password incorrect.
+    </div>
+<% } %>
+
+<form action="/login_user" method="post">
+    <table id="table_ref" class="table table-bordered table-dark" >
+        <tr>
+            <td colspan="2" align="center"><label>Login</label></td>
+        </tr>
+        <tr>
+            <td><label>Username </label></td>
+            <td><input id="register_username" type="text" name="username" required></td>
+        </tr>
+        <tr>
+            <td><label>Password </label></td>
+            <td><input id="register_password" type="password" name="password" required></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right"><button id="button_color">Login</button></td>
+        </tr>
+    </table>
+</form>

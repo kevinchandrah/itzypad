@@ -1,0 +1,48 @@
+<% if (alert == "register_failed_username") { %>
+    <div id= "alert_Custom" class="alert alert-danger" role="alert">
+        your username has been used.
+    </div>
+<% } else if (alert == "register_failed_email") { %>
+    <div id= "alert_Custom" class="alert alert-danger" role="alert">
+        your email has been used.
+    </div>
+<% } else if (alert == "register_failed_password") { %>
+    <div id= "alert_Custom" class="alert alert-danger" role="alert">
+        your password and confirm password isn't identical.
+    </div>
+    <% } else if (alert == "register_failed_password") { %>
+        <div id= "alert_Custom" class="alert alert-danger" role="alert">
+            your password and confirm password isn't identical.
+        </div>
+<% } %>
+
+<form action="/register_data" method="post">
+    <table id="table_ref" class="table table-bordered table-dark" >
+        <tr>
+            <td colspan="2" align="center"><label>Registration</label></td>
+        </tr>
+        <tr>
+            <td><label>Username </label></td>
+            <td><input id="" type="text" name="username" required></td>
+        </tr>
+        <tr>
+            <td><label>Account name</label></td>
+            <td><input id="" type="text" name="nickname" required></td>
+        </tr>
+        <tr>
+            <td><label>Password </label></td>
+            <td><input id="" type="password" name="password" required></td>
+        </tr>
+        <tr>
+            <td><label>Password Confirm</label></td>
+            <td><input id="" type="password" name="con_password" required></td>
+        </tr>
+        <tr>
+            <td><label>E-mail </label></td>
+            <td><input id="" type="text" name="email" required></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><button id="button_color">Register</button></td>
+        </tr>
+    </table>
+</form>
