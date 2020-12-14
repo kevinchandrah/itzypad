@@ -283,7 +283,7 @@ router.post('/register_data',
             controller_user.uCreate(data_Username,data_password,data_Email,data_nickname);
             warningMessage = "register_Success";
             req.session.data_user = data_Username;
-            req.session.loginStatus = true;
+            userStatus = "true";
             res.redirect('/');
         }
     }
