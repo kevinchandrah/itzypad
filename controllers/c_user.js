@@ -9,12 +9,13 @@ async function uFindPassword(data){
     return await connect_user.find(query);
 }
 async function uCreate(username,password,email,nickname){
+    var theme_default = "white";
     const data_user = new connect_user({
         username : username,
         password : password,
         email : email,
         nickname : nickname,
-        theme : white
+        theme : theme_default
     })
     return await data_user.save()
 }
