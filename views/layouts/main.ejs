@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head id = "header">
+        <title>itzypad</title>
+        <link rel = "icon" href ="asset/image/itzypad_logo_kecil.png" type = "image/x-icon">
+        <% if ( userStatus == "true" ) { %>
+            <% allData.forEach((data, index) => { %>
+                <% if ( theme == data.theme ) { %>
+                    <link rel="stylesheet" href="css/main_theme_white.css">
+                <% } else { %>
+                    <link rel="stylesheet" href="css/main_theme_black.css">
+                <% } %>
+            <% }) %>
+        <% } else { %>
+            <link rel="stylesheet" href="css/main_theme_white.css">
+        <% } %>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    <body id="m_body">
+        <nav id="top" class="navbar navbar-expand-sm navbar-dark fixed-top">
+            <div id = "t_left" class="collapse navbar-collapse">
+                <div id = "left_shift">
+                    <img src ="asset/image/itzypad.png">
+                </div>
+                <div id = "left_shift">
+                    <form class="form-inline" action="/l_home" method="post">
+                        <button class="btn btn-outline-light">Home</button>
+                    </form>
+                </div>
+                <div id = "left_shift">
+                    <form class="form-inline" action="/l_list" method="post">
+                        <button class="btn btn-outline-light">List</button>
+                    </form>
+                </div>
+            </div>
+            <div id = "t_middle" class="collapse navbar-collapse">
+                <div>
+                    <form class="form-inline" action="/search" method="post">
+                        <div id="left_shift">
+                            <input id="search_bar" class="form-control mr-sm-2" type="search" name="search" placeholder="Search Title Book" aria-label="Search">
+                        </div>
+                        <div id="left_shift">
+                            <button id="" class="btn btn-outline-light" type="submit"><i data-feather="search"></i></button>
+                        </div>
+                        <script>feather.replace()</script>
+                    </form>
+                </div>
+            </div>
+            <div id = "t_right" class="form-inline my-2 my-lg-0">
+                <% if ( userStatus == "true" ) { %>
+                    <div class="dropdown">
+                        <button id="dropbtn" class="btn btn-outline-light">
+                            <%  allData.forEach((data, index) => { %>
+                                <%= data.nickname %>
+                            <% }) %>
+                        </button>
+                        <div class="dropdown-content">
+                            <form class="form-inline" action="/l_user_setting" method="post">
+                                <button class="button_drop">Setting</button>
+                            </form>
+                            <form class="form-inline" action="/l_user_logout" method="post">
+                                <button class="button_drop">Log out</button>
+                            </form>
+                        </div>
+                    </div>
+                <% } else { %>
+                    <div id = "left_shift">
+                            <form class="form-inline" action="/l_login" method="post">
+                                <button class="btn btn-outline-light">login</button>
+                            </form>
+                        
+                    </div>
+                    <div id = "left_shift">
+                        <form class="form-inline" action="/l_register" method="post">
+                            <button class="btn btn-outline-light">register</button>
+                        </form>
+                    </div>
+                <% } %>
+            </div>
+        </nav>
+        <div id="middle">
+            <div id = "m_left">
+                aaaa
+            </div>
+            <div id = "m_middle">
+                <%- body -%>
+            </div>
+            <div id = "m_right">
+                aaaa
+            </div>
+        </div>
+        <div id="bottom">
+            <div id="b_middle">
+                <form action="/l_about" method="post">
+                    <button id="copyright" class="btn btn-outline-light" disabled>&copy; Copyright Itzpad</button>
+                    <button class="btn btn-outline-light">about</button>
+                </form>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script>feather.replace()</script>
+    </body>
+</html>
