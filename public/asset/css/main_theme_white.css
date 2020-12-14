@@ -1,0 +1,6 @@
+@import "main_style.css";
+:root{
+    --middle_color :#fafafa;
+    --out_middle_color : #d9d9d9;
+    --text_middle_color : #375a7f;
+}
